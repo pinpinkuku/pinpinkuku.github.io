@@ -1,0 +1,16 @@
+title: 小馋猫
+author: 
+description: 
+
+highlighter: null
+permalink: /:title
+
+url: "https://pinpinkuku.github.io"
+baseurl: ""
+github_username: pinpinkuku
+
+# Custom options:
+# color_scheme: azul|ruby|amber|avocado
+# color_scheme: avocado
+
+port: 8088
