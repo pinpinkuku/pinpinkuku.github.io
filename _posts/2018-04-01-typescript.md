@@ -5,15 +5,16 @@ description: ES6
 category: blog
 ---
 
-### ES5、ES6、JavaScript和TypeScript的关系？
+### 1、ES6简介
+- ES5和ES6的关系？   
 ES是标准，ES5、ES6是两个不同的版本；  
+- JavaScript和TypeScript的关系？    
 JavaScript、TypeScript是两种语言，分别实现了ES5、ES6标准
-
-### 编译器
+- 编译器    
 大多数浏览器还不支持ES6，因此使用ES6规范编写的代码无法再浏览器中运行，故出现了各类编译器，将ES6翻译成ES5在网页中运行；
 
-### TypeScript常见语法
-#### 字符串
+### 2、TypeScript新增语法
+#### 字符串扩展
 - 多行字符串：JS处理多行字符串使用 + 连字符，而TS使用 `` 直接书写，书写简单且易于理解；
 - 字符串模板：多行字符串中嵌入变量及方法，如   
 
@@ -39,7 +40,7 @@ function test(template, name, age) {
 test`hello my name is ${ myname }, i'm ${ getAge }`
 ```
 
-### 参数特性
+#### 参数扩展
 - 定义参数类型：string、boolean、number、any 或对于函数而言的 void，如        
 
 ``` typescript
@@ -70,7 +71,7 @@ function test:void (a: string, b?: string, c: string = 'somany') {
 }
 ```
 
-### 函数特性
+#### 函数扩展
 - Rest和Spread   
 ... 表示任意个参数   
 
@@ -95,7 +96,7 @@ func1.next();
 func1.next();
 ```
 
-### 析构表达式
+#### 析构表达式
 - 对象    
 
 ``` typescript
@@ -122,7 +123,7 @@ var [number1, number2] = array;
 var [, , number1, number2] = array;
 ``` 
 
-### 表达式和循环
+#### 表达式和循环
 - 箭头表达式：声明匿名函数
 - 循环     
 
@@ -151,14 +152,14 @@ for (var n of myArray) {
 }
 ```
 
-### 面向对象
+#### 面向对象
 - 访问控制符  
 public： 默认  
 private：仅类内部   
 protected： 类及其子类内部
 - 类的构造函数
 
-### 泛型
+#### 泛型
 ``` typescript
 var workers: Array<Person> = [];
 workers[0] = new Person("");
