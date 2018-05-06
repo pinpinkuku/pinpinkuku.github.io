@@ -25,8 +25,10 @@ blockquote,
 table,
 img,
 hr,
-.fluid-width-video-wrapper,
-.highlight {
+.fluid-width-video-wrapper
+/* ,
+.highlight  */
+{
   margin-bottom: 20px;
 }
 
