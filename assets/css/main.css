@@ -25,10 +25,7 @@ blockquote,
 table,
 img,
 hr,
-.fluid-width-video-wrapper
-/* ,
-.highlight  */
-{
+.fluid-width-video-wrapper {
   margin-bottom: 20px;
 }
 
@@ -290,7 +287,7 @@ footer {
 ================================================================================
 */
 .highlight {
-  padding: 10px;
+  padding: 8px;
   border-radius: 6px;
   background-color: #272822;
   color: #f8f8f2;
