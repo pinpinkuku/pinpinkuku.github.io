@@ -288,7 +288,7 @@ footer {
 ================================================================================
 */
 .highlight {
-  padding: 30px;
+  padding: 10px;
   border-radius: 6px;
   background-color: #272822;
   color: #f8f8f2;
@@ -296,7 +296,8 @@ footer {
 }
 
 .highlight code {
-  font-size: .7rem;
+  /* font-size: .7rem; */
+  font-size: .6rem;
 }
 
 /*
@@ -316,7 +317,8 @@ footer {
 
 .single time {
   color: #999;
-  font-size: .9rem;
+  /* font-size: .9rem; */
+  font-size: .6rem;
 }
 
 .not-found {
