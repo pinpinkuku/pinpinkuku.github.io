@@ -5,12 +5,11 @@ description: 命令规则、HTML、CSS、JS
 category: blog
 ---
 
-### **命名规范**
 坚持使用好的代码规范，无论团队人数多少，代码风格应该一致
 
 > 引用 [Code Guide by @AlloyTeam](http://alloyteam.github.io/CodeGuide/)
 
-#### **命名规则**
+### 目录、文件命名规则
 
 - 项目命名：全部采用小写方式，以下划线为分割，如：my_project_name
 - 目录命名：参照项目命名规则，有复数时，要使用复数，如：
@@ -19,47 +18,54 @@ scripts, styles, images
 - css文件命名：参照项目命名规则，如retina_sprites.scc
 - HTML文件命名：参照项目命名规则，如error_report.html
 
-#### **HTML**
-##### **语法**
+### HTML语法书写规则
 - 缩进使用soft tab（4个空格）；
 - 嵌套的节点应该缩进；
 - 属性使用双引号；
 - 属性名全小写，用 _ 做分割符；
 - 不要忽略可选的关闭标签；
 - 不要再自动闭合的标签使用斜线；  
-如：
-``` html
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Page title</title>
-    </head>
-    <body>
-        <img src="pic/apple.jpg" alt="apple">
+如：    
 
-        <h1 class="Hello_world">Hello World!</h1>
-    </body>
-</html>
+``` html
+    <!DOCTYPE html>
+
+    <html>
+
+        <head>
+            <title>Page title</title>
+        </head>
+
+        <body>
+            <img src="pic/apple.jpg" alt="apple">
+
+            <h1 class="Hello_world">Hello World!</h1>
+        </body>
+
+    </html>
 ```
 
-##### **基本**
+### HTML命令规则
 - doctype大写；
 - 加上lang属性；
 - 字符编码通常用'UTF-8';
-- 用<meta>标签指定页面用什么版本的IE来渲染
+- 用<meta>标签指定页面用什么版本的IE来渲染；  
+如：      
 
-如：  
 ``` html
-<!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    </head>
-</html>
+    <!DOCTYPE html>
+
+    <html lang="en-us">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        </head>
+
+    </html>
 ```
 
-##### **属性顺序**
+### HTML属性出现顺序
 属性应该按特定的顺序出现以保证易读性：
 - class
 - id
@@ -74,37 +80,36 @@ class是为高可复用组件设计的，所以应处于第一位；
 id更加具体且应该尽量少用，所以將它放在第二位；  
 如：  
 ``` html
-<a class="..." id="..." data-model="abc" href="#">Example link</a>
+    <a class="..." id="..." data-model="abc" href="#">Example link</a>
 
-<input class="form-control" type="text">
+    <input class="form-control" type="text">
 
-<img src="..." alt="...">
+    <img src="..." alt="...">
 ```
 
-##### **其他**
+### HTML其他
 - 应尽量避免在JS文件中生成标签，会导致内容难以查找、编辑且性能也会更差；
 - 减少标签数量，应尽量避免多余的父节点，可通过迭代和重构来使html变得更少；
 - 实用高于完美，任何时候都要用尽量小的复杂度和尽量少的标签来解决问题。
 
-#### **CSS, SCSS**
-##### **语法**
+### CSS, SCSS语法书写规则
 - 缩进使用Soft tabl(4个空格)
 - 每个属性声明末尾都要加分号；  
 
 如：
 ``` css
-.element{
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    .element{
+        position: absolute;
+        top: 10px;
+        left: 10px;
 
-    border-radius: 10px;
-    width: 50px;
-    height: 50px;
-}
+        border-radius: 10px;
+        width: 50px;
+        height: 50px;
+    }
 ```
 
-##### **空格**
+### CSS, SCSS空格出现规则
 以下情况不需要空格：
 - 属性名后
 - 多个规则的分隔符','前
@@ -121,24 +126,25 @@ id更加具体且应该尽量少用，所以將它放在第二位；
 - 属性值中的','后
 - 注释'/*'后和'*/'前  
 
-##### **注释**
+### CSS, SCSS注释书写规则
 - 统一用'/* */'进行注释；
 - 缩进与下一行代码保持一致；
 - 可位于一个代码行的末尾，与代码间隔一个空格；
 
-##### **引号**
+### CSS, SCSS引号书写规则
 - 最外层统一使用双引号；
 - url的内容要用引号；
 - 属性选择器中的属性值需要引号；
 
-##### **命名**
+### CSS, SCSS命名规则
 - 类名使用小写字母，以中划线分隔；
 - id采用驼峰命名法；
 - scss中的变量、函数、混合、placeholder采用驼峰命名法；
 
-##### **属性声明顺序**
+### CSS, SCSS属性声明顺序
+略
 
-##### **其他**
+### CSS, SCSS其他规则
 - 不允许有空的规则；
 - 元素选择器用小写字母；
 - 去掉小数点前面的0；
@@ -153,9 +159,7 @@ id更加具体且应该尽量少用，所以將它放在第二位；
 - 发布的代码中不要有 @import ;
 - 尽量少用'*'选择器；
 
-#### **JavaScript**
-
-##### **语法**
+### JavaScript语法书写规则
 - 缩进使用 soft tab（4个空格）；
 - 单行长度不要超过80；
 - 最外层统一使用单引号；
@@ -163,18 +167,18 @@ id更加具体且应该尽量少用，所以將它放在第二位；
 
 如：
 ``` javascript
-var x = 1,
-    y = 'foo',
-    z = '<div id="test"></div>';
+    var x = 1,
+        y = 'foo',
+        z = '<div id="test"></div>';
 
-if (x < y) {
-    x += 10;
-} else {
-    x += 1;
-}
+    if (x < y) {
+        x += 10;
+    } else {
+        x += 1;
+    }
 ```
 
-##### **分号**
+### JavaScript分号使用规则
 需要加分号的情况：
 - 变量声明
 - 表达式
@@ -186,16 +190,16 @@ if (x < y) {
 
 如：
 ``` javascript
-var x = 1;
+    var x = 1;
 
-x++;
-
-do {
     x++;
-} while(x < 10);
+
+    do {
+        x++;
+    } while(x < 10);
 ``` 
 
-##### **空格**
+### JavaScript空格使用规则
 不需要加空格的情况：
 - 对象的属性名后
 - 前缀一元运算符后，后缀一元运算符前
@@ -219,23 +223,23 @@ do {
 
 如：
 ``` javascript
-var a = {
-    b: 1
-}
+    var a = {
+        b: 1
+    }
 
-++x;
-y++;
-z = x ? 1 : 2;
+    ++x;
+    y++;
+    z = x ? 1 : 2;
 
-var a = [1, 2];
-var a = (1 + 2) * 3;
+    var a = [1, 2];
+    var a = (1 + 2) * 3;
 
-for (int i = 0; i < 8; i++) {
-    i++;
-}
+    for (int i = 0; i < 8; i++) {
+        i++;
+    }
 ```
 
-##### **空行**
+### JavaScript空行出现规则
 需要空行的几种情况：
 - 变量声明后
 - 注释前 
@@ -244,66 +248,64 @@ for (int i = 0; i < 8; i++) {
 
 如：
 ``` javascript
-var a, 
-    foo = 7,
-    b, c, d = 8;
+    var a, 
+        foo = 7,
+        b, c, d = 8;
 ``` 
 
-##### **注释**
-1. 单行注释
-    - 双斜线后 + 一个空格；
-    - 缩进与下一行代码保持一致
-    - 可位于代码行的末尾，与代码间隔一个空格  
+### JavaScript注释规则
+- 单行注释
+  - 双斜线后 + 一个空格；
+  - 缩进与下一行代码保持一致
+  - 可位于代码行的末尾，与代码间隔一个空格  
 
     如：
     ``` javascript
-    if (condition) {
-        // if you make something, check the password
-        allowed();
-    }
+        if (condition) {
+            // if you make something, check the password
+            allowed();
+        }
 
-    var onething = 'onething'; // one space after code
+        var onething = 'onething'; // one space after code
     ``` 
 
-2. 多行注释  
-
+- 多行注释  
     最少三行， '*'后面 + 一个空格，建议使用情况如下：
-    - 难于理解的代码段
-    - 可能存在错误的代码段
-    - 浏览器特殊的hack代码
-    - 业务逻辑强相关的代码  
+  - 难于理解的代码段
+  - 可能存在错误的代码段
+  - 浏览器特殊的hack代码
+  - 业务逻辑强相关的代码  
 
     如：
     ``` javascript
-    /*
-    * one space after '*'
-    */
-    var x = 1;
+        /*
+        * one space after '*'
+        */
+        var x = 1;
     ```
-3. 文档注释  
-
+- 文档注释  
     建议使用情况
-    - 所有常量
-    - 所有函数
-    - 所有类  
+  - 所有常量
+  - 所有函数
+  - 所有类  
 
     如：
     ``` javascript
-    /**
-    * @func
-    * @ param {string} a - 参数a
-    * @ param {number} b=1 - 参数b默认值为1
-    * @ param {object} c - 参数c是一个对象
-    * @ param {object[]} d - 参数d是一个对象数组
-    * @ param {string} e.h - 参数e的h属性
-    * @ param {string} [f] - 参数f是一个可选参数
-    */
-    function foo(a, b, c, d, e, f) {
-        ... 
-    }
+        /**
+        * @func
+        * @ param {string} a - 参数a
+        * @ param {number} b=1 - 参数b默认值为1
+        * @ param {object} c - 参数c是一个对象
+        * @ param {object[]} d - 参数d是一个对象数组
+        * @ param {string} e.h - 参数e的h属性
+        * @ param {string} [f] - 参数f是一个可选参数
+        */
+        function foo(a, b, c, d, e, f) {
+            ... 
+        }
     ```
 
-##### **变量命名**
+### JavaScript变量命名规则
 - 标准变量采用驼峰命名法
 - 'ID'在变量名中全大写
 - 'URL'在变量名中全大写
@@ -315,44 +317,44 @@ var a,
 
 如：
 ``` javascript
-var thisIsMyName;
+    var thisIsMyName;
 
-var goodID;
+    var goodID;
 
-var reportURL;
+    var reportURL;
 
-var AndroidVersion;
+    var AndroidVersion;
 
-var iOSVersion;
+    var iOSVersion;
 
-var MAX_COUNT = 10;
+    var MAX_COUNT = 10;
 
-function Person(name) {
-    this.name = name;
-}
+    function Person(name) {
+        this.name = name;
+    }
 
-var $body = $('body')
+    var $body = $('body')
 ```
 
-##### **数组、对象**
+### JavaScript数组、对象基本规则
 - 对象属性名不需要加引号
 - 对象以缩进的形式书写，不要写在一行
 - 数组、对象最后不要有逗号
 
 如：
 ``` javascript
-var a = {b: 1};
+    var a = {b: 1};
 
-var a = {
-    b: 1,
-    c: 2
-}
+    var a = {
+        b: 1,
+        c: 2
+    }
 ```
 
-##### **括号**
+### JavaScript括号使用规则
 - 以下关键字后必须有大括号：if, else, for, while, do, swith, try, catch, finally, with;
 
-##### **null**
+### JavaScript null使用场景
 适用场景：
 - 初始化一个将来可能被赋值的对象的变量
 - 与已经初始化的变量进行比较
@@ -363,13 +365,14 @@ var a = {
 - 不要用null来判断函数调用时有无传参
 - 不要与未初始化的变量进行比较
 
-##### **undefined**
+### JavaScript undefined使用场景
 - 永远不要直接使用undefined进行变量判断；
 - 使用typeod和字符串'undefined'对变量进行判断
 
-##### **jshint**
+### jshint
+略
 
-### **其他**
+### 其他规范
 - 不要混用tab和space
 - 不要在一处使用多个tab或space
 - 换行符统一用'LF'

@@ -13,37 +13,64 @@ category: blog
 
 #### 常见的块级元素
 ``` html
-<address>...</address>
-<center>...</center>
-<h1>...</h1> 标题 1 ~ 6 级
-<hr>
-<p>...</p>
-<pre>...</pre>
-<blockquote>...</blockquote>
-<marquee>...</marquee>
-<ul>...</ul>
-<ol>...</ol>
-<dl>...</dl>
-<table>...</table>
-<form>...</form>
-<div>...</div>
+    <address>...</address>
+
+    <center>...</center>
+
+    <h1>...</h1> 标题 1 ~ 6 级
+
+    <hr>
+
+    <p>...</p>
+
+    <pre>...</pre>
+
+    <blockquote>...</blockquote>
+
+    <marquee>...</marquee>
+
+    <ul>...</ul>
+
+    <ol>...</ol>
+
+    <dl>...</dl>
+
+    <table>...</table>
+
+    <form>...</form>
+
+    <div>...</div>
 ```
 
 #### 常见的行内元素
 ``` html
-<span>...</span>
-<a>...</a>
-<br>
-<b>...</b>
-<strong>...</strong>
-<img>
-<sup>...</sup>
-<sub>...</sub>
-<i>...</i>
-<em>...</em>
-<del>...</del>
-<u>...</u>
-<input>...</input>
-<textarea>...</textarea>
-<select>...</select>
+    <span>...</span>
+
+    <a>...</a>
+
+    <br>
+
+    <b>...</b>
+
+    <strong>...</strong>
+
+    <img>
+
+    <sup>...</sup>
+
+    <sub>...</sub>
+
+    <i>...</i>
+
+    <em>...</em>
+
+    <del>...</del>
+
+    <u>...</u>
+
+    <input>...</input>
+
+    <textarea>...</textarea>
+    
+    <select>...</select>
 ```

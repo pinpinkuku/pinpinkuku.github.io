@@ -25,7 +25,8 @@ blockquote,
 table,
 img,
 hr,
-.fluid-width-video-wrapper {
+.fluid-width-video-wrapper,
+.highlight {
   margin-bottom: 20px;
 }
 
@@ -168,6 +169,10 @@ header > div {
           flex-grow: 0;
 }
 
+.highlighter-rouge {
+  color: #FF6666;
+}
+
 #logo {
   display: inline-block;
   height: 110px;
@@ -287,7 +292,7 @@ footer {
 ================================================================================
 */
 .highlight {
-  padding: 8px;
+  padding: 10px;
   border-radius: 6px;
   background-color: #272822;
   color: #f8f8f2;
