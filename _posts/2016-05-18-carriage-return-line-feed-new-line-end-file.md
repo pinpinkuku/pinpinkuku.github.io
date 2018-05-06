@@ -5,7 +5,7 @@ description: 回车和换行在不同系统下面定义不同，时不时会有�
 category: blog
 ---
 
-#### 回车和换行
+### 回车和换行
 
 回车 (Carriage Return) 和换行 (Line Feed) 的区别，[这里](http://stackoverflow.com/questions/1761051/difference-between-n-and-r)有一个历史原因可参考：
 
@@ -42,7 +42,7 @@ category: blog
 - Mac 下的文本文件在 Windows 下打开会成为一行，因为 Windows 只认识`\r\n`，也就是`0d0a`
 - Windows 下的文本文件在 Mac 下打开，Vim 中会在每行末尾显示一个 `^M`，(不是两个字符组成的)
 
-#### 文件末尾空行
+### 文件末尾空行
 
 [POSIX](https://zh.wikipedia.org/zh-sg/POSIX)对行的[定义](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_206)如下：
 
@@ -83,7 +83,7 @@ category: blog
 
 不遵守标准带来的则是：在一些编辑器下面，比如 Sublime，他把`\n`的当做了行之间的分隔符，于是文件最后一行的`\n`就看上去成了一个新的空行，这就是错误解读标准造成的，拼接文件时也会产生不必要的麻烦，比如上例。
 
-#### \ No new line at end of file
+### \ No new line at end of file
 
 基于上面的原因，再去看 git diff 的`\ No new line at end of file`信息，就很好解释了。
 
