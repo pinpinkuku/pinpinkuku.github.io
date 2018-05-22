@@ -100,6 +100,7 @@ Javascript是一种基于对象的语言，但是又没有class类，如何封�
     function Animal() {
         this.species = '动物';
     }
+
     function Cat(name, age) {
         this.name = name;
         this.age = age;
@@ -155,6 +156,7 @@ Javascript是一种基于对象的语言，但是又没有class类，如何封�
     var Chinese = {
         nation: '中国'
     }
+
     var Doctor = {
         career: '医生'
     }
@@ -212,9 +214,9 @@ Javascript是一种基于对象的语言，但是又没有class类，如何封�
     var Doctor = deepCopy(Chinese);
 ```
 
-## 附录：一道题     
+## 附录：一道面试题     
+写一个 subMath 继承 Math，并重写 random 方法返回 0 ~ 9 的数字    
 
-    写 subMath 继承 Math 方法，并重写 random 方法返回 0 ~ 9 的数字
 ``` javascript
     function subMath(){}
 
