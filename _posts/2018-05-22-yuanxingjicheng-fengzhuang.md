@@ -46,7 +46,7 @@ Javascript是一种基于对象的语言，但是又没有class类，如何封�
 
 - 构造函数模式    
 
-所谓构造函数，其实就是内部使用了this的普通函数。对构造函数使用new运算符，就能生成实例，并且this变量会绑定在实例对象上。
+    所谓构造函数，其实就是内部使用了this的普通函数。对构造函数使用new运算符，就能生成实例，并且this变量会绑定在实例对象上。
 ``` javascript
     function Cat(name, age) {
         this.name = name;
@@ -68,7 +68,7 @@ Javascript是一种基于对象的语言，但是又没有class类，如何封�
 
 - Prototype模式    
 
-Javascript规定：每个构造函数都有prototype属性，执行另一个对象。这个对象所有的属性和方法，都被构造函数的实例继承。
+    Javascript规定：每个构造函数都有prototype属性，执行另一个对象。这个对象所有的属性和方法，都被构造函数的实例继承。
 ``` javascript
     function Cat(name, age) {
         this.name = name;
@@ -94,17 +94,17 @@ Javascript规定：每个构造函数都有prototype属性，执行另一个对�
 - hasOwnProperty()
 - in
 
-## 构造函数的继承
-    ``` javascript
-        function Animal() {
-            this.species = '动物';
-        }
+## 构造函数的继承     
 
-        function Cat(name, age) {
-            this.name = name;
-            this.age = age;
-        }
-    ```
+``` javascript
+    function Animal() {
+        this.species = '动物';
+    }
+    function Cat(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+```
 怎么才能使猫对象继承动物对象呢？
 
 - 构造函数绑定
@@ -149,16 +149,16 @@ Javascript规定：每个构造函数都有prototype属性，执行另一个对�
     alert(cat1.species);
 ```
 
-## 非构造函数的继承
-    ``` javascript
-        var Chinese = {
-            nation: '中国'
-        }
-    
-        var Doctor = {
-            career: '医生'
-        }
-    ```
+## 非构造函数的继承     
+
+``` javascript
+    var Chinese = {
+        nation: '中国'
+    }
+    var Doctor = {
+        career: '医生'
+    }
+```
 由于Chinese和Doctor都是普通对象，不是构造函数，无法使用构造函数逇方法实现继承。
 
 - object()方法
@@ -212,8 +212,9 @@ Javascript规定：每个构造函数都有prototype属性，执行另一个对�
     var Doctor = deepCopy(Chinese);
 ```
 
-## 附录：一道题
-写 subMath 继承 Math 方法，并重写 random 方法返回 0 ~ 9 的数字
+## 附录：一道题     
+
+    写 subMath 继承 Math 方法，并重写 random 方法返回 0 ~ 9 的数字
 ``` javascript
     function subMath(){}
 
