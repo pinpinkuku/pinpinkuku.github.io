@@ -5,8 +5,10 @@ description:
 category: blog
 ---
 
-> 引用 [Javascript 面向对象编程（一）：封装](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html)
-> 引用 [Javascript面向对象编程（二）：构造函数的继承](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html)
+> 引用 [Javascript 面向对象编程（一）：封装](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html)     
+
+> 引用 [Javascript面向对象编程（二）：构造函数的继承](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html)     
+
 > 引用 [Javascript面向对象编程（三）：非构造函数的继承](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance_continued.html)
 
 ## 封装
@@ -42,7 +44,8 @@ Javascript是一种基于对象的语言，但是又没有class类，如何封�
 ```
 缺点：无法反应出多个实例之间的关系
 
-- 构造函数模式
+- 构造函数模式    
+
 所谓构造函数，其实就是内部使用了this的普通函数。对构造函数使用new运算符，就能生成实例，并且this变量会绑定在实例对象上。
 ``` javascript
     function Cat(name, age) {
@@ -63,7 +66,8 @@ Javascript是一种基于对象的语言，但是又没有class类，如何封�
 ```
 缺点：没生成一个实例，属性和方法就拷贝一次，重复的内容不但多占内存，也缺乏效率。
 
-- Prototype模式
+- Prototype模式    
+
 Javascript规定：每个构造函数都有prototype属性，执行另一个对象。这个对象所有的属性和方法，都被构造函数的实例继承。
 ``` javascript
     function Cat(name, age) {
@@ -85,31 +89,27 @@ Javascript规定：每个构造函数都有prototype属性，执行另一个对�
 
     alert(cat1.eat == cat2.eat);   //true
 ```
-
 为了配置prototype属性，Javascript还定义了部分辅助方法：
 - isPrototypeOf()
 - hasOwnProperty()
 - in
 
 ## 构造函数的继承
-``` javascript
-    function Animal() {
-        this.species = '动物';
-    }
+    ``` javascript
+        function Animal() {
+            this.species = '动物';
+        }
 
-    function Cat(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-```
+        function Cat(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+    ```
 怎么才能使猫对象继承动物对象呢？
 
 - 构造函数绑定
-
 - Prototype模式
-
 - 直接继承Prototype模式
-
 - 利用空对象作为中介
 ``` javascript
     function extend(Child, Parent) {
@@ -118,7 +118,8 @@ Javascript规定：每个构造函数都有prototype属性，执行另一个对�
         Child.prototype = new F();
 
         Child.prototype.constructor = Child;
-        Child.uber = Parent.prototype;  //uber属性指向父对象的prototype属性，这等于子对象可以直接调用父对象的方法。
+        //uber属性指向父对象的prototype属性，这等于子对象可以直接调用父对象的方法。
+        Child.uber = Parent.prototype;  
     }
 
     extend(Dog, Animal);
@@ -143,20 +144,21 @@ Javascript规定：每个构造函数都有prototype属性，执行另一个对�
     }
 
     extend2(Cat, Animal);
-    var cat1 = new Cat("balana", 1);
+
+    var cat1 = new Cat("balana1", 1);
     alert(cat1.species);
 ```
 
 ## 非构造函数的继承
-``` javascript
-    var Chinese = {
-        nation: '中国'
-    }
-
-    var Doctor = {
-        career: '医生'
-    }
-```
+    ``` javascript
+        var Chinese = {
+            nation: '中国'
+        }
+    
+        var Doctor = {
+            career: '医生'
+        }
+    ```
 由于Chinese和Doctor都是普通对象，不是构造函数，无法使用构造函数逇方法实现继承。
 
 - object()方法
